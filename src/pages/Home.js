@@ -41,12 +41,16 @@ export default function Home() {
     }
 
     function handleCloseTimeAdd(isSave) {
+        if (editTime.start.length < 16) setModalTimeAdd(false);
+        if (editTime.end.length < 16) setModalTimeAdd(false);
+
         if (isSave) {
             let newEditTime = { ...editTime, user: localStorage.getItem('userId') };
             api.post(`/time`, newEditTime)
                 .then(res => loadTimes())
                 .catch(err => alert(err));
         }
+
         setModalTimeAdd(false);
     }
     
@@ -146,7 +150,7 @@ export default function Home() {
                 {!!itemsGrid && (
                     <div style={{ marginLeft: '100px', marginBottom: '20px' }}>
                         <strong>
-                            Tempo total: {Helper.getTotalTime(itemsGrid)} minutos.
+                            Total time spent: {Helper.getTotalTime(itemsGrid)} min.
                         </strong>
                     </div>
                 )}
