@@ -16,7 +16,7 @@ export default function Home() {
         paper: {
             position: 'absolute',
             width: 690,
-            height: 600,
+            height: 270,
             backgroundColor: theme.palette.background.paper,
             border: '#7D53D4',
             boxShadow: theme.shadows[5],

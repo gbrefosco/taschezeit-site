@@ -13,7 +13,7 @@ export default function Login() {
     async function handleSubmitNewUser(event) {
         event.preventDefault();
         const loginData = await api.get(`/user?login=${login}`);
-        
+
         if (loginData.data.length > 0) {
             const loginDataDetails = loginData.data[0];
             if (loginDataDetails.password === password) {
@@ -30,24 +30,30 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <div className="titulo">
-                <h1 className="title">TascheZeit</h1>
-                <h2 className="description">A simple and pratical time-manager <br /> for those who want to be organized</h2>
+        <>
+            <div className="login">
+                <div className="textLogin">
+                    <h1 className="titleLogin">TascheZeit</h1>
+                    <h2 className="descriptionLogin">A simple and pratical time-manager <br /> for those who want to be organized</h2>
+                </div>
+
+                <form className="PLogin" onSubmit={handleSubmitNewUser}>
+                    <div className="login_label">
+                        <label>Login</label>
+                    </div>
+                    <div className="formDiv">
+                        <input className="inputLogin login_input" onChange={e => setLogin(e.target.value)} type="text" placeholder="Type in your login account"></input>
+                        <input className="inputLogin pass_input" onChange={e => setPassword(e.target.value)} type="password" placeholder="Type in your password"></input>
+
+                        <div className="continue">
+                            <button>Continue</button>
+                        </div>
+                        <p className="signUp">
+                            Don't have an account? <a href="/singup">Sign Up</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-            <form className="PLogin" onSubmit={handleSubmitNewUser}>
-                <label className="login_label"><strong>Sing in</strong></label>
-                <input className="login_input" onChange={e => setLogin(e.target.value)} type="text" placeholder="Type in your login account"></input>
-                <input className="pass_input" onChange={e => setPassword(e.target.value)} type="password" placeholder="Type in your password"></input>
-                <a href="www.google.com">Forgot your password?</a>
-
-                <button className="continue">Continue</button>
-
-                <p className="signUp">
-                    Don't have an account?
-                    <a href="/singup">Sign Up</a>
-                </p>
-            </form>
-        </div>
+        </>
     );
 }

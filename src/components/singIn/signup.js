@@ -3,7 +3,7 @@ import api from '../../services/api';
 import { useHistory } from 'react-router-dom';
 import './signup.css';
 
-export default function SignUp(){
+export default function SignUp() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,30 +29,35 @@ export default function SignUp(){
             });
             history.push('/');
         }
-        
+
     }
 
     return (
         <>
-        <div className="titulo">
-            <h1 className="title">TascheZeit</h1>
-            <h2 className="description">A simple and pratical time-manager <br/> for those who want to be organized</h2>
-        </div>
+            <div className="cadastroUser">
+                <div className="titulo">
+                    <h1 className="title">TascheZeit</h1>
+                    <h2 className="description">A simple and pratical time-manager <br /> for those who want to be organized</h2>
+                </div>
 
-        <form className="PLogin" onSubmit={handleCreateAccount}>
-                <label className="login_label">Sign Up</label>
-                <input className="email_singup" onChange={e => setEmail(e.target.value)} type="email" placeholder="Enter a valid email"></input>
-                <input className="pass_singup" onChange={e => setPassword(e.target.value)} type="password" placeholder="Enter a valid password"></input>
-                <input className="login_singup" onChange={e => setUserNickName(e.target.value)} type="text" placeholder="Enter a valid username"></input>
+                <form className="cadastro" onSubmit={handleCreateAccount}>
+                    <div className="login_label">
+                        <label>Sign Up</label>
+                    </div>
+                    <div className="formDiv">
+                        <input className="inputCadastro email_singup" onChange={e => setEmail(e.target.value)} type="email" placeholder="Enter a valid email"></input>
+                        <input className="inputCadastro pass_singup" onChange={e => setPassword(e.target.value)} type="password" placeholder="Enter a valid password"></input>
+                        <input className="inputCadastro login_singup" onChange={e => setUserNickName(e.target.value)} type="text" placeholder="Enter a valid username"></input>
 
-                <button className="continue">Create account</button>
-
-                <p className="logar">
-                    Already have an account?
-                    <a href="/">Login</a>
-                </p>
-        </form>
-
+                        <div className="continue">
+                            <button>Create account</button>
+                        </div>
+                        <p className="logar">
+                            Already have an account? <a href="/">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </>
     );
 }
