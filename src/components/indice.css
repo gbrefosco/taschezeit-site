@@ -1,0 +1,20 @@
+.Menu {
+    position: absolute;
+    width: 118px;
+    height: 660px;
+    left: 0px;
+    top: 0px;
+    background: #7D53D4;
+}
+
+.TimeList {
+    position: absolute;
+    width: 984px;
+    height: 370px;
+    left: 244px;
+    top: 255px;
+    background: #F7F8FA;
+    border: 1px solid #2A004B;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

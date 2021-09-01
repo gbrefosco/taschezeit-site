@@ -1,0 +1,24 @@
+.upper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 84px;
+    color: #7D53D4;
+}
+
+.graphBox {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    left: 20%;
+    top: 25%;
+    background: #C4C4C4;
+    border: 1px solid #4914B6;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

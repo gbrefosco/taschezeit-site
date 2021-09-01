@@ -1,0 +1,13 @@
+.item {
+    background: #fff;
+    font-size: 18px;
+    border: 2px solid #7D53D4;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 5px;
+}

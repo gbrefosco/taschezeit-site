@@ -1,0 +1,53 @@
+form {
+    margin-top: 60px;
+    max-width: 700px;
+    margin-left: 100px;
+
+    display: flex;
+}
+
+.projectName, .clientName {
+    flex: 1;
+    height: 70px;
+    padding: 0 24px;
+    border-radius: 5px 0 0 5px;
+    color: #4e16c0;
+    border: 2px solid #7D53D4;
+    border-right: 0;
+}
+
+.submitProject, .submitClient {
+    width: 210px;
+    height: 70px;
+    background-color: #4e16c0;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.gridProject, .gridClient {
+    margin-top: 80px;
+    max-width: 700px;
+    border-radius: 5px;
+
+}
+
+.itemProject, .itemClient {
+    margin-left: 100px;
+    background: #fff;
+    font-size: 18px;
+    border: 2px solid #7D53D4;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.svgIcon {
+    margin-left: auto;
+    color: #4e16c0;
+    align-items: center;
+}

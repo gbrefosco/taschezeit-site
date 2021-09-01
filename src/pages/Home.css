@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.actualDate {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 60px;
+    color: #7D53D4;
+}
+
+.btn {
+    margin: 20px;
+    margin-left: 150px;
+    /* width: 175px; */
+    /* height: 52px; */
+    /* left: 18%; */
+    /* top: 30%; */
+    background: linear-gradient(#7D53D4, #4110a1, #200358);
+    /* font-weight: bold; */
+    /* font-size: 16px; */
+    color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grid {
+    margin-top: 50px;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+.item {
+    margin-left: 100px;
+    background: #fff;
+    font-size: 18px;
+    border: 2px solid #7D53D4;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.svgIcon {
+    margin-left: auto;
+    color: #4e16c0;
+    align-items: center;
+}
+
+.cardItem {
+    padding: 10px;
+}
+
+.projectsSelection {
+    font-size: 16px;
+    border: 2px solid #9f9ea1;
+    border-radius: 5px;
+    width: 100%;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
