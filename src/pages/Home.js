@@ -41,7 +41,7 @@ export default function Home() {
     }
 
     function handleCloseTimeAdd(isSave) {
-        if ( editTime.start && editTime.start.length >= 16 && editTime.end && editTime.end.length >= 16 && isSave ) {
+        if ( editTime.start && editTime.start.length == 16 && editTime.end && editTime.end.length == 16 && isSave ) {
             let newEditTime = { ...editTime, user: localStorage.getItem('userId') };
             api.post(`/time`, newEditTime)
                 .then(res => loadTimes())
